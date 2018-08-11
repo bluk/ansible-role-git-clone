@@ -1,0 +1,10 @@
+---
+# tasks file for ansible-role-git-clone
+- name: Clone the git repository
+  git:
+    repo: "{{ item.url }}"
+    dest: "{{ item.dest }}"
+    force: no
+    recursive: yes
+    update: "{{ item.repo_update|default('no') }}"
+  loop: "{{ git_repos|flatten(levels=1) }}"

@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - role: ansible-role-git-clone
+      vars:
+        git_repos:
+          - url: https://github.com/bluk/dotfiles.git
+            dest: "~/dotfiles"
+

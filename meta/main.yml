@@ -1,0 +1,16 @@
+galaxy_info:
+  author: Bryant Luk
+  role_name: git_clone
+  description: Clones git repositories to a local directory.
+  license: Apache
+  min_ansible_version: 2.6
+  platforms:
+    - name: MacOSX
+      versions:
+        - all
+  galaxy_tags:
+    - development
+    - system
+    - packaging
+    - git
+dependencies: []
