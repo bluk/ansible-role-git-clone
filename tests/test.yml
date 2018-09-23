@@ -7,4 +7,3 @@
         git_repos:
           - url: https://github.com/bluk/dotfiles.git
             dest: "~/dotfiles"
-
