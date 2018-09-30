@@ -4,7 +4,11 @@
   git:
     repo: "{{ item.url }}"
     dest: "{{ item.dest }}"
-    force: no
-    recursive: yes
+    accept_hostkey: "{{ item.accept_hostkey|default('no') }}"
+    force: "{{ item.force|default('no') }}"
+    recursive: "{{ item.recursive|default('yes') }}"
+    remote: "{{ item.remote|default('origin') }}"
     update: "{{ item.repo_update|default('no') }}"
+    verify_commit: "{{ item.verify_commit|default('no') }}"
+    version: "{{ item.version|default('HEAD') }}"
   loop: "{{ git_repos|flatten(levels=1) }}"
